@@ -35,8 +35,8 @@ const Menu = () => {
               <button className="py-4 text-lg font-semibold">Settings</button>
             </li>
           </ul>
-          <div>
-            <button className="py-40">Sign Out</button>
+          <div className="py-4 mt-40 mb-4">
+            <button className="font-medium">Sign Out</button>
           </div>
         </div>
       </>
