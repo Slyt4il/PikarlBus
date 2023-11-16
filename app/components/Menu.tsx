@@ -1,7 +1,8 @@
 "use client";
+import { MenuProps } from "@/types/propTypes";
 import { useState } from "react";
 
-const Menu = () => {
+const Menu = ({ onB1Click, onB2Click, onB3Click, onB4Click, onB5Click }: MenuProps) => {
   const [show, setShow] = useState(false);
 
   return (
@@ -20,19 +21,19 @@ const Menu = () => {
           <h2 className="text-2xl font-bold mt-8 mb-16">Rakchad Yingcheep</h2>
           <ul>
             <li>
-              <button className="py-4 text-lg font-semibold">Announcements</button>
+              <button className="py-4 text-lg font-semibold" onClick={() => { onB1Click ? onB1Click() : null; setShow(false); }}>Announcements</button>
             </li>
             <li>
-              <button className="py-4 text-lg font-semibold">Favorites</button>
+              <button className="py-4 text-lg font-semibold" onClick={() => { onB2Click ? onB2Click() : null; setShow(false); }}>Favorites</button>
             </li>
             <li>
-              <button className="py-4 text-lg font-semibold">History</button>
+              <button className="py-4 text-lg font-semibold" onClick={() => { onB3Click ? onB3Click() : null; setShow(false); }}>History</button>
             </li>
             <li>
-              <button className="py-4 text-lg font-semibold">Payment</button>
+              <button className="py-4 text-lg font-semibold" onClick={() => { onB4Click ? onB4Click() : null; setShow(false); }}>Payment</button>
             </li>
             <li>
-              <button className="py-4 text-lg font-semibold">Settings</button>
+              <button className="py-4 text-lg font-semibold" onClick={() => { onB5Click ? onB5Click() : null; setShow(false); }}>Settings</button>
             </li>
           </ul>
           <div className="py-4 mt-40 mb-4">
